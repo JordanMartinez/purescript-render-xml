@@ -3,6 +3,11 @@ module RenderXml.Html.Attributes
 
   , alt
   , charset
+  , lang
+  , httpEquiv
+  , content
+  , sizes
+  , color
   , class_
   , classes
   , cols
@@ -64,18 +69,18 @@ module RenderXml.Html.Attributes
 
 import Prelude
 
-import DOM.HTML.Indexed (CSSPixel) as I
-import DOM.HTML.Indexed.AutocompleteType (AutocompleteType(..), renderAutocompleteType) as I
-import DOM.HTML.Indexed.ButtonType (ButtonType(..)) as I
-import DOM.HTML.Indexed.FormMethod (FormMethod(..), renderFormMethod) as I
-import DOM.HTML.Indexed.InputAcceptType (InputAcceptType(..), renderInputAcceptType) as I
-import DOM.HTML.Indexed.InputType (InputType(..)) as I
-import DOM.HTML.Indexed.MenuType (MenuType(..)) as I
-import DOM.HTML.Indexed.MenuitemType (MenuitemType(..), renderMenuitemType) as I
-import DOM.HTML.Indexed.OrderedListType (OrderedListType(..)) as I
-import DOM.HTML.Indexed.PreloadValue (PreloadValue(..), renderPreloadValue) as I
-import DOM.HTML.Indexed.ScopeValue (ScopeValue(..), renderScopeValue) as I
-import DOM.HTML.Indexed.StepValue (StepValue(..), renderStepValue) as I
+import RenderXml.Html.Indexed (CSSPixel) as I
+import RenderXml.Html.Indexed.AutocompleteType (AutocompleteType(..), renderAutocompleteType) as I
+import RenderXml.Html.Indexed.ButtonType (ButtonType(..)) as I
+import RenderXml.Html.Indexed.FormMethod (FormMethod(..), renderFormMethod) as I
+import RenderXml.Html.Indexed.InputAcceptType (InputAcceptType(..), renderInputAcceptType) as I
+import RenderXml.Html.Indexed.InputType (InputType(..)) as I
+import RenderXml.Html.Indexed.MenuType (MenuType(..)) as I
+import RenderXml.Html.Indexed.MenuitemType (MenuitemType(..), renderMenuitemType) as I
+import RenderXml.Html.Indexed.OrderedListType (OrderedListType(..)) as I
+import RenderXml.Html.Indexed.PreloadValue (PreloadValue(..), renderPreloadValue) as I
+import RenderXml.Html.Indexed.ScopeValue (ScopeValue(..), renderScopeValue) as I
+import RenderXml.Html.Indexed.StepValue (StepValue(..), renderStepValue) as I
 import Data.MediaType (MediaType)
 import Data.Newtype (unwrap)
 import Data.String (joinWith)
@@ -101,8 +106,23 @@ class_ = prop (AttrName "class") <<< show
 classes :: forall r. Array String -> Prop (class :: String | r)
 classes = class_ <<< show <<< joinWith " "
 
+lang :: forall r. String -> Prop (lang :: String | r)
+lang = prop (AttrName "lang") <<< show
+
+httpEquiv :: forall r. String -> Prop (httpEquiv :: String | r)
+httpEquiv = prop (AttrName "http-equiv") <<< show
+
+content :: forall r. String -> Prop (content :: String | r)
+content = prop (AttrName "content") <<< show
+
+sizes :: forall r. String -> Prop (sizes :: String | r)
+sizes = prop (AttrName "sizes") <<< show
+
 cols :: forall r. Int -> Prop (cols :: Int | r)
 cols = prop (AttrName "cols") <<< show
+
+color :: forall r. String -> Prop (color :: String | r)
+color = prop (AttrName "color") <<< show
 
 rows :: forall r. Int -> Prop (rows :: Int | r)
 rows = prop (AttrName "rows") <<< show

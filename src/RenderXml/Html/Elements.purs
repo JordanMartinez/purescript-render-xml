@@ -207,7 +207,7 @@ module RenderXml.Html.Elements
   , module Exports
   ) where
 
-import DOM.HTML.Indexed as I
+import RenderXml.Html.Indexed as I
 import RenderXml.Html.Core (Html, Prop, leaf, namespaceHtml, node)
 import RenderXml.Html.Core (textElem) as Exports
 import RenderXml.Core (ElemName(..))
