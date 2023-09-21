@@ -1,4 +1,4 @@
-module RenderXml.Svg.Attributes.Paint
+module RenderXml.Svg.Indexed.Paint
   ( Paint(..)
   , printPaint
   ) where
@@ -6,7 +6,7 @@ module RenderXml.Svg.Attributes.Paint
 import Prelude
 
 import Data.Maybe (Maybe, maybe)
-import RenderXml.Svg.Attributes.Color (Color, printColor)
+import RenderXml.Svg.Indexed.Color (Color, printColor)
 
 data Paint
   = PaintNone

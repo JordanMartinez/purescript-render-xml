@@ -1,4 +1,4 @@
-module RenderXml.Svg.Attributes.FontStretch
+module RenderXml.Svg.Indexed.FontStretch
   ( FontStretch(..)
   , printFontStretch
   ) where

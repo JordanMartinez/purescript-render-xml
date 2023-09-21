@@ -1,4 +1,4 @@
-module RenderXml.Svg.Attributes.Color
+module RenderXml.Svg.Indexed.Color
   ( Color(..)
   , printColor
   ) where

@@ -1,4 +1,4 @@
-module RenderXml.Svg.Attributes.Orient
+module RenderXml.Svg.Indexed.Orient
   ( Orient(..)
   , printOrient
   ) where

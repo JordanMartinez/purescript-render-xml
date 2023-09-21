@@ -1,4 +1,4 @@
-module RenderXml.Svg.Attributes.TextAnchor
+module RenderXml.Svg.Indexed.TextAnchor
   ( TextAnchor(..)
   , printTextAnchor
   ) where

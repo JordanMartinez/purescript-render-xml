@@ -1,4 +1,4 @@
-module RenderXml.Svg.Attributes.Baseline
+module RenderXml.Svg.Indexed.Baseline
   ( Baseline(..)
   , printBaseline
   ) where

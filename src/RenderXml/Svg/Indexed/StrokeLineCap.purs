@@ -1,4 +1,4 @@
-module RenderXml.Svg.Attributes.StrokeLineCap
+module RenderXml.Svg.Indexed.StrokeLineCap
   ( StrokeLineCap(..)
   , printStrokeLineCap
   ) where

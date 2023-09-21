@@ -1,4 +1,4 @@
-module RenderXml.Svg.Attributes.CSSLength
+module RenderXml.Svg.Indexed.CSSLength
   ( CSSLength(..)
   , printCSSLength
   ) where

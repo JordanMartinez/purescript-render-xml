@@ -1,4 +1,4 @@
-module RenderXml.Svg.Attributes.FillState
+module RenderXml.Svg.Indexed.FillState
   ( FillState(..)
   , printFillState
   ) where

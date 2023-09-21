@@ -1,4 +1,4 @@
-module RenderXml.Svg.Attributes.MarkerUnit
+module RenderXml.Svg.Indexed.MarkerUnit
   ( MarkerUnit(..)
   , printMarkerUnit
   ) where

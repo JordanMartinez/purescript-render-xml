@@ -1,4 +1,4 @@
-module RenderXml.Svg.Attributes.Path
+module RenderXml.Svg.Indexed.Path
   ( PathCommand -- Constructor not exported. Use m, l, h, v, c, s, q, t, a, or z
   , CommandPositionReference(..)
   , CommandArcChoice(..)

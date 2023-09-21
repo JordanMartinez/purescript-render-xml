@@ -1,4 +1,4 @@
-module RenderXml.Svg.Attributes.Duration where
+module RenderXml.Svg.Indexed.Duration where
 
 import Data.Maybe (Maybe(..))
 

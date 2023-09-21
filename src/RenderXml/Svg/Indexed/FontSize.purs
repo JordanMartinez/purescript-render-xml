@@ -1,10 +1,10 @@
-module RenderXml.Svg.Attributes.FontSize
+module RenderXml.Svg.Indexed.FontSize
   ( FontSize(..)
   , printFontSize
   ) where
 
 import Prelude
-import RenderXml.Svg.Attributes.CSSLength (CSSLength, printCSSLength)
+import RenderXml.Svg.Indexed.CSSLength (CSSLength, printCSSLength)
 
 data FontSize
   = XXSmall

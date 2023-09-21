@@ -1,4 +1,4 @@
-module RenderXml.Svg.Attributes.FontStyle
+module RenderXml.Svg.Indexed.FontStyle
   ( FontStyle(..)
   , printFontStyle
   ) where

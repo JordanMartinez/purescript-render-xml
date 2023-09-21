@@ -1,4 +1,4 @@
-module RenderXml.Svg.Attributes.MeetOrSlice
+module RenderXml.Svg.Indexed.MeetOrSlice
   ( MeetOrSlice(..)
   , printMeetOrSlice
   ) where

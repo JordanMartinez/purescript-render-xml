@@ -1,4 +1,4 @@
-module RenderXml.Svg.Attributes.Transform
+module RenderXml.Svg.Indexed.Transform
   ( Transform(..)
   , printTransform
   ) where

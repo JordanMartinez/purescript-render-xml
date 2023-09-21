@@ -1,4 +1,4 @@
-module RenderXml.Svg.Attributes.MaskUnit
+module RenderXml.Svg.Indexed.MaskUnit
   ( MaskUnit(..)
   , printMaskUnit
   ) where

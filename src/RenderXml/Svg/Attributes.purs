@@ -6,28 +6,28 @@
 -- | `show` function to display what the ADT is and the `printX` function
 -- | to render the corresponding String value that should appear in the HTML.
 module RenderXml.Svg.Attributes
-  ( module RenderXml.Svg.Attributes.Align
-  , module RenderXml.Svg.Attributes.Baseline
-  , module RenderXml.Svg.Attributes.Color
-  , module RenderXml.Svg.Attributes.CSSLength
-  , module RenderXml.Svg.Attributes.Duration
-  , module RenderXml.Svg.Attributes.FillState
-  , module RenderXml.Svg.Attributes.FontSize
-  , module RenderXml.Svg.Attributes.FontStyle
-  , module RenderXml.Svg.Attributes.FontStretch
-  , module RenderXml.Svg.Attributes.FontWeight
-  , module RenderXml.Svg.Attributes.GradientUnit
-  , module RenderXml.Svg.Attributes.MarkerUnit
-  , module RenderXml.Svg.Attributes.MaskUnit
-  , module RenderXml.Svg.Attributes.MeetOrSlice
-  , module RenderXml.Svg.Attributes.Orient
-  , module RenderXml.Svg.Attributes.Path
-  , module RenderXml.Svg.Attributes.Paint
-  , module RenderXml.Svg.Attributes.SpreadMethod
-  , module RenderXml.Svg.Attributes.StrokeLineCap
-  , module RenderXml.Svg.Attributes.StrokeLineJoin
-  , module RenderXml.Svg.Attributes.TextAnchor
-  , module RenderXml.Svg.Attributes.Transform
+  ( module RenderXml.Svg.Indexed.Align
+  , module RenderXml.Svg.Indexed.Baseline
+  , module RenderXml.Svg.Indexed.Color
+  , module RenderXml.Svg.Indexed.CSSLength
+  , module RenderXml.Svg.Indexed.Duration
+  , module RenderXml.Svg.Indexed.FillState
+  , module RenderXml.Svg.Indexed.FontSize
+  , module RenderXml.Svg.Indexed.FontStyle
+  , module RenderXml.Svg.Indexed.FontStretch
+  , module RenderXml.Svg.Indexed.FontWeight
+  , module RenderXml.Svg.Indexed.GradientUnit
+  , module RenderXml.Svg.Indexed.MarkerUnit
+  , module RenderXml.Svg.Indexed.MaskUnit
+  , module RenderXml.Svg.Indexed.MeetOrSlice
+  , module RenderXml.Svg.Indexed.Orient
+  , module RenderXml.Svg.Indexed.Path
+  , module RenderXml.Svg.Indexed.Paint
+  , module RenderXml.Svg.Indexed.SpreadMethod
+  , module RenderXml.Svg.Indexed.StrokeLineCap
+  , module RenderXml.Svg.Indexed.StrokeLineJoin
+  , module RenderXml.Svg.Indexed.TextAnchor
+  , module RenderXml.Svg.Indexed.Transform
   , attributeName
   , begin
   , class_
@@ -116,28 +116,28 @@ import Data.String (joinWith)
 import Data.Tuple (Tuple(..))
 import RenderXml.Svg.Core (Prop, prop)
 import RenderXml.Core (AttrName(..))
-import RenderXml.Svg.Attributes.Align (Align(..), printAlign)
-import RenderXml.Svg.Attributes.Baseline (Baseline(..), printBaseline)
-import RenderXml.Svg.Attributes.CSSLength (CSSLength(..), printCSSLength)
-import RenderXml.Svg.Attributes.Color (Color(..), printColor)
-import RenderXml.Svg.Attributes.Duration (Duration)
-import RenderXml.Svg.Attributes.FillState (FillState(..), printFillState)
-import RenderXml.Svg.Attributes.FontSize (FontSize(..), printFontSize)
-import RenderXml.Svg.Attributes.FontStretch (FontStretch, printFontStretch)
-import RenderXml.Svg.Attributes.FontStyle (FontStyle, printFontStyle)
-import RenderXml.Svg.Attributes.FontWeight (FontWeight, printFontWeight)
-import RenderXml.Svg.Attributes.GradientUnit (GradientUnit(..), printGradientUnit)
-import RenderXml.Svg.Attributes.MarkerUnit (MarkerUnit(..), printMarkerUnit)
-import RenderXml.Svg.Attributes.MaskUnit (MaskUnit(..), printMaskUnit)
-import RenderXml.Svg.Attributes.MeetOrSlice (MeetOrSlice(..), printMeetOrSlice)
-import RenderXml.Svg.Attributes.Orient (Orient(..), printOrient)
-import RenderXml.Svg.Attributes.Paint (Paint(..), printPaint)
-import RenderXml.Svg.Attributes.Path (PathCommand, CommandPositionReference(..), CommandArcChoice(..), CommandSweepChoice(..), toArrayString, m, l, h, v, c, s, q, t, a, z)
-import RenderXml.Svg.Attributes.SpreadMethod (SpreadMethod(..), printSpreadMethod)
-import RenderXml.Svg.Attributes.StrokeLineCap (StrokeLineCap, printStrokeLineCap)
-import RenderXml.Svg.Attributes.StrokeLineJoin (StrokeLineJoin, printStrokeLineJoin)
-import RenderXml.Svg.Attributes.TextAnchor (TextAnchor(..), printTextAnchor)
-import RenderXml.Svg.Attributes.Transform (Transform(..), printTransform)
+import RenderXml.Svg.Indexed.Align (Align(..), printAlign)
+import RenderXml.Svg.Indexed.Baseline (Baseline(..), printBaseline)
+import RenderXml.Svg.Indexed.CSSLength (CSSLength(..), printCSSLength)
+import RenderXml.Svg.Indexed.Color (Color(..), printColor)
+import RenderXml.Svg.Indexed.Duration (Duration)
+import RenderXml.Svg.Indexed.FillState (FillState(..), printFillState)
+import RenderXml.Svg.Indexed.FontSize (FontSize(..), printFontSize)
+import RenderXml.Svg.Indexed.FontStretch (FontStretch, printFontStretch)
+import RenderXml.Svg.Indexed.FontStyle (FontStyle, printFontStyle)
+import RenderXml.Svg.Indexed.FontWeight (FontWeight, printFontWeight)
+import RenderXml.Svg.Indexed.GradientUnit (GradientUnit(..), printGradientUnit)
+import RenderXml.Svg.Indexed.MarkerUnit (MarkerUnit(..), printMarkerUnit)
+import RenderXml.Svg.Indexed.MaskUnit (MaskUnit(..), printMaskUnit)
+import RenderXml.Svg.Indexed.MeetOrSlice (MeetOrSlice(..), printMeetOrSlice)
+import RenderXml.Svg.Indexed.Orient (Orient(..), printOrient)
+import RenderXml.Svg.Indexed.Paint (Paint(..), printPaint)
+import RenderXml.Svg.Indexed.Path (PathCommand, CommandPositionReference(..), CommandArcChoice(..), CommandSweepChoice(..), toArrayString, m, l, h, v, c, s, q, t, a, z)
+import RenderXml.Svg.Indexed.SpreadMethod (SpreadMethod(..), printSpreadMethod)
+import RenderXml.Svg.Indexed.StrokeLineCap (StrokeLineCap, printStrokeLineCap)
+import RenderXml.Svg.Indexed.StrokeLineJoin (StrokeLineJoin, printStrokeLineJoin)
+import RenderXml.Svg.Indexed.TextAnchor (TextAnchor(..), printTextAnchor)
+import RenderXml.Svg.Indexed.Transform (Transform(..), printTransform)
 
 attributeName :: forall r. String -> Prop (attributeName :: String | r)
 attributeName = prop (AttrName "attributeName")

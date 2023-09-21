@@ -1,4 +1,4 @@
-module RenderXml.Svg.Attributes.StrokeLineJoin
+module RenderXml.Svg.Indexed.StrokeLineJoin
   ( StrokeLineJoin(..)
   , printStrokeLineJoin
   ) where

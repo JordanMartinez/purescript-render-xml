@@ -1,4 +1,4 @@
-module RenderXml.Svg.Attributes.GradientUnit where
+module RenderXml.Svg.Indexed.GradientUnit where
 
 import Prelude
 

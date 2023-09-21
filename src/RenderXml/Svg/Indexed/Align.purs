@@ -1,4 +1,4 @@
-module RenderXml.Svg.Attributes.Align
+module RenderXml.Svg.Indexed.Align
   ( Align(..)
   , printAlign
   ) where

@@ -1,4 +1,4 @@
-module RenderXml.Svg.Attributes.FontWeight
+module RenderXml.Svg.Indexed.FontWeight
   ( FontWeight(..)
   , printFontWeight
   ) where

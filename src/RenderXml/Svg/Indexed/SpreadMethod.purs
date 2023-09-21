@@ -1,4 +1,4 @@
-module RenderXml.Svg.Attributes.SpreadMethod where
+module RenderXml.Svg.Indexed.SpreadMethod where
 
 import Prelude
 
