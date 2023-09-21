@@ -6,29 +6,7 @@
 -- | `show` function to display what the ADT is and the `printX` function
 -- | to render the corresponding String value that should appear in the HTML.
 module RenderXml.Svg.Attributes
-  ( module RenderXml.Svg.Indexed.Align
-  , module RenderXml.Svg.Indexed.Baseline
-  , module RenderXml.Svg.Indexed.Color
-  , module RenderXml.Svg.Indexed.CSSLength
-  , module RenderXml.Svg.Indexed.Duration
-  , module RenderXml.Svg.Indexed.FillState
-  , module RenderXml.Svg.Indexed.FontSize
-  , module RenderXml.Svg.Indexed.FontStyle
-  , module RenderXml.Svg.Indexed.FontStretch
-  , module RenderXml.Svg.Indexed.FontWeight
-  , module RenderXml.Svg.Indexed.GradientUnit
-  , module RenderXml.Svg.Indexed.MarkerUnit
-  , module RenderXml.Svg.Indexed.MaskUnit
-  , module RenderXml.Svg.Indexed.MeetOrSlice
-  , module RenderXml.Svg.Indexed.Orient
-  , module RenderXml.Svg.Indexed.Path
-  , module RenderXml.Svg.Indexed.Paint
-  , module RenderXml.Svg.Indexed.SpreadMethod
-  , module RenderXml.Svg.Indexed.StrokeLineCap
-  , module RenderXml.Svg.Indexed.StrokeLineJoin
-  , module RenderXml.Svg.Indexed.TextAnchor
-  , module RenderXml.Svg.Indexed.Transform
-  , attributeName
+  ( attributeName
   , begin
   , class_
   , classes
@@ -116,28 +94,26 @@ import Data.String (joinWith)
 import Data.Tuple (Tuple(..))
 import RenderXml.Svg.Core (Prop, prop)
 import RenderXml.Core (AttrName(..))
-import RenderXml.Svg.Indexed.Align (Align(..), printAlign)
-import RenderXml.Svg.Indexed.Baseline (Baseline(..), printBaseline)
-import RenderXml.Svg.Indexed.CSSLength (CSSLength(..), printCSSLength)
-import RenderXml.Svg.Indexed.Color (Color(..), printColor)
+import RenderXml.Svg.Indexed.Align (Align, printAlign)
+import RenderXml.Svg.Indexed.Baseline (Baseline, printBaseline)
 import RenderXml.Svg.Indexed.Duration (Duration)
-import RenderXml.Svg.Indexed.FillState (FillState(..), printFillState)
-import RenderXml.Svg.Indexed.FontSize (FontSize(..), printFontSize)
+import RenderXml.Svg.Indexed.FillState (FillState, printFillState)
+import RenderXml.Svg.Indexed.FontSize (FontSize, printFontSize)
 import RenderXml.Svg.Indexed.FontStretch (FontStretch, printFontStretch)
 import RenderXml.Svg.Indexed.FontStyle (FontStyle, printFontStyle)
 import RenderXml.Svg.Indexed.FontWeight (FontWeight, printFontWeight)
-import RenderXml.Svg.Indexed.GradientUnit (GradientUnit(..), printGradientUnit)
-import RenderXml.Svg.Indexed.MarkerUnit (MarkerUnit(..), printMarkerUnit)
-import RenderXml.Svg.Indexed.MaskUnit (MaskUnit(..), printMaskUnit)
-import RenderXml.Svg.Indexed.MeetOrSlice (MeetOrSlice(..), printMeetOrSlice)
-import RenderXml.Svg.Indexed.Orient (Orient(..), printOrient)
-import RenderXml.Svg.Indexed.Paint (Paint(..), printPaint)
-import RenderXml.Svg.Indexed.Path (PathCommand, CommandPositionReference(..), CommandArcChoice(..), CommandSweepChoice(..), toArrayString, m, l, h, v, c, s, q, t, a, z)
-import RenderXml.Svg.Indexed.SpreadMethod (SpreadMethod(..), printSpreadMethod)
+import RenderXml.Svg.Indexed.GradientUnit (GradientUnit, printGradientUnit)
+import RenderXml.Svg.Indexed.MarkerUnit (MarkerUnit, printMarkerUnit)
+import RenderXml.Svg.Indexed.MaskUnit (MaskUnit, printMaskUnit)
+import RenderXml.Svg.Indexed.MeetOrSlice (MeetOrSlice, printMeetOrSlice)
+import RenderXml.Svg.Indexed.Orient (Orient, printOrient)
+import RenderXml.Svg.Indexed.Paint (Paint, printPaint)
+import RenderXml.Svg.Indexed.Path (PathCommand, toArrayString)
+import RenderXml.Svg.Indexed.SpreadMethod (SpreadMethod, printSpreadMethod)
 import RenderXml.Svg.Indexed.StrokeLineCap (StrokeLineCap, printStrokeLineCap)
 import RenderXml.Svg.Indexed.StrokeLineJoin (StrokeLineJoin, printStrokeLineJoin)
-import RenderXml.Svg.Indexed.TextAnchor (TextAnchor(..), printTextAnchor)
-import RenderXml.Svg.Indexed.Transform (Transform(..), printTransform)
+import RenderXml.Svg.Indexed.TextAnchor (TextAnchor, printTextAnchor)
+import RenderXml.Svg.Indexed.Transform (Transform, printTransform)
 
 attributeName :: forall r. String -> Prop (attributeName :: String | r)
 attributeName = prop (AttrName "attributeName")
