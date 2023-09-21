@@ -2,7 +2,7 @@
 , license = "MIT"
 , dependencies =
   [ "arrays"
-  , "dom-indexed"
+  , "datetime"
   , "foldable-traversable"
   , "maybe"
   , "media-types"
@@ -13,7 +13,6 @@
   , "tuples"
   , "typelevel-prelude"
   , "unsafe-coerce"
-  , "web-pointerevents"
   ]
 , packages = ./packages.dhall
 , sources = [ "src/**/*.purs" ]

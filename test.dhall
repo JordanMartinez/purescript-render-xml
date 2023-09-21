@@ -3,7 +3,7 @@ let config = ./spago.dhall
 let thisConfig =
       { name = "foo"
       , dependencies =
-        [ "aff", "console", "effect", "node-buffer", "node-fs", "node-fs-aff" ]
+        [ "aff", "effect", "node-buffer", "node-fs-aff" ]
       , sources = [ "test/**/*.purs" ]
       , packages = ./packages.dhall
       }
