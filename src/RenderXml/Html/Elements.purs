@@ -207,11 +207,11 @@ module RenderXml.Html.Elements
   , module Exports
   ) where
 
-import RenderXml.Html.Indexed as I
-import RenderXml.Html.Core (Html, Prop, leaf, namespaceHtml, node)
-import RenderXml.Html.Core (textElem) as Exports
 import RenderXml.Core (ElemName(..))
 import RenderXml.Core as XmlCore
+import RenderXml.Html.Core (Html, Prop, leaf, namespaceHtml, node)
+import RenderXml.Html.Core (textElem) as Exports
+import RenderXml.Html.Indexed as I
 
 -- | An Html element that admits children.
 type Node r = Array (Prop r) -> Array Html -> Html

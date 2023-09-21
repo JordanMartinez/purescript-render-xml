@@ -400,6 +400,7 @@ type HTMLlink = Noninteractive
   , rel :: String
   , sizes :: String
   , type :: MediaType
+  , color :: String
   )
 
 type HTMLmain = Interactive ()

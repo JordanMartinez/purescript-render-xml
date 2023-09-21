@@ -3,6 +3,7 @@ module RenderXml.Html.Attributes
 
   , alt
   , charset
+  , dataProp
   , lang
   , httpEquiv
   , content
@@ -69,6 +70,12 @@ module RenderXml.Html.Attributes
 
 import Prelude
 
+import Data.MediaType (MediaType)
+import Data.Newtype (unwrap)
+import Data.String (joinWith)
+import Prim.Row as Row
+import RenderXml.Core (AttrName(..))
+import RenderXml.Html.Core (class IsHtmlProp, Prop, attr, prop, toHtmlPropValue)
 import RenderXml.Html.Indexed (CSSPixel) as I
 import RenderXml.Html.Indexed.AutocompleteType (AutocompleteType(..), renderAutocompleteType) as I
 import RenderXml.Html.Indexed.ButtonType (ButtonType(..)) as I
@@ -81,12 +88,6 @@ import RenderXml.Html.Indexed.OrderedListType (OrderedListType(..)) as I
 import RenderXml.Html.Indexed.PreloadValue (PreloadValue(..), renderPreloadValue) as I
 import RenderXml.Html.Indexed.ScopeValue (ScopeValue(..), renderScopeValue) as I
 import RenderXml.Html.Indexed.StepValue (StepValue(..), renderStepValue) as I
-import Data.MediaType (MediaType)
-import Data.Newtype (unwrap)
-import Data.String (joinWith)
-import Prim.Row as Row
-import RenderXml.Html.Core (Prop, class IsHtmlProp, toHtmlPropValue, attr, prop)
-import RenderXml.Core (AttrName(..))
 import Unsafe.Coerce (unsafeCoerce)
 
 -- | Every `Prop lt i` can be cast to some `Prop gt i` as long as `lt` is a
@@ -105,6 +106,9 @@ class_ = prop (AttrName "class") <<< show
 
 classes :: forall r. Array String -> Prop (class :: String | r)
 classes = class_ <<< show <<< joinWith " "
+
+dataProp :: forall r. String -> String -> Prop r
+dataProp name_ = prop (AttrName $ "data-" <> name_) <<< show
 
 lang :: forall r. String -> Prop (lang :: String | r)
 lang = prop (AttrName "lang") <<< show
