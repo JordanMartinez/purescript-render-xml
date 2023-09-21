@@ -1,4 +1,3 @@
-
 -- | Similar to `Halogen.HTML.Properties`. You should always use
 -- | this module's entities (e.g. `class_`) over its corresponding
 -- | value in `Halogen.HTML.Properties (e.g. `HP.class_`).
@@ -273,7 +272,7 @@ points = prop (AttrName "points") <<< show <<< Array.intercalate " " <<< map (\(
 
 pathLength :: forall r. Number -> Prop (pathLength :: Number | r)
 pathLength = prop (AttrName "pathLength") <<< show <<< show
- 
+
 patternContentUnits :: forall r. String -> Prop (patternContentUnits :: String | r)
 patternContentUnits = prop (AttrName "patternContentUnits") <<< show
 

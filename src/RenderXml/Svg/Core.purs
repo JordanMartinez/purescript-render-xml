@@ -26,7 +26,7 @@ textElem :: String -> Svg
 textElem = XmlCore.textElem
 
 node :: forall i. ElemName NamespaceSvg -> Array (Prop i) -> Array Svg -> Svg
-node  = XmlCore.node
+node = XmlCore.node
 
 leaf :: forall i. ElemName NamespaceSvg -> Array (Prop i) -> Svg
 leaf = XmlCore.leaf

@@ -48,8 +48,8 @@ newtype Xml nameSpace = Xml String
 type role Xml nominal
 
 render :: forall ns. Maybe (DocType ns) -> Xml ns -> String
-render dtd (Xml str) = 
-  foldMap (\(DocType dtd') -> "<!DOCTYPE " <> dtd' <> ">") dtd 
+render dtd (Xml str) =
+  foldMap (\(DocType dtd') -> "<!DOCTYPE " <> dtd' <> ">") dtd
     <> str
 
 newtype ElemName :: Namespace -> Type
@@ -107,16 +107,17 @@ node' mbNs (ElemName tag) props children = Xml $
     <> tag
     <> ">"
 
-transitionNode 
+transitionNode
   :: forall outerNs innerNs i
-   . Namespace 
+   . Namespace
   -> ElemName innerNs
-  -> Array (Prop innerNs i) 
-  -> Array (Xml innerNs) 
+  -> Array (Prop innerNs i)
+  -> Array (Xml innerNs)
   -> Xml outerNs
 transitionNode (Namespace ns) (ElemName tag) props children = Xml $
   "<" <> tag
-    <> " xlmns=" <> show ns
+    <> " xlmns="
+    <> show ns
     <> (if Array.null props then "" else append " " $ Array.intercalate " " $ fromPropArray props)
     <> ">"
     <> (fold $ fromXmlArray children)
@@ -134,15 +135,16 @@ leaf' mbNs (ElemName tag) props = Xml $
     <> (if Array.null props then "" else append " " $ Array.intercalate " " $ fromPropArray props)
     <> " />"
 
-transitionLeaf 
+transitionLeaf
   :: forall outerNs innerNs i
-   . Namespace 
+   . Namespace
   -> ElemName innerNs
-  -> Array (Prop innerNs i) 
+  -> Array (Prop innerNs i)
   -> Xml outerNs
 transitionLeaf (Namespace ns) (ElemName tag) props = Xml $
   "<" <> tag
-    <> " xlmns=" <> show ns
+    <> " xlmns="
+    <> show ns
     <> (if Array.null props then "" else append " " $ Array.intercalate " " $ fromPropArray props)
     <> " />"
 
@@ -150,13 +152,13 @@ prop :: forall ns i. AttrName ns -> String -> Prop ns i
 prop = prop' Nothing
 
 prop' :: forall ns i. Maybe Namespace -> AttrName ns -> String -> Prop ns i
-prop' mbNs (AttrName name) val = 
+prop' mbNs (AttrName name) val =
   Prop $ (foldMap (append ":" <<< unwrap) mbNs) <> name <> "=" <> val
 
 attr :: forall ns i. AttrName ns -> Prop ns i
 attr = attr' Nothing
 
 attr' :: forall ns i. Maybe Namespace -> AttrName ns -> Prop ns i
-attr' mbNs (AttrName name) = 
+attr' mbNs (AttrName name) =
   Prop $ (foldMap (flip append ":" <<< unwrap) mbNs) <> name
 

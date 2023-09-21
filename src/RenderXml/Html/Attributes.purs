@@ -71,7 +71,7 @@ import DOM.HTML.Indexed.FormMethod (FormMethod(..), renderFormMethod) as I
 import DOM.HTML.Indexed.InputAcceptType (InputAcceptType(..), renderInputAcceptType) as I
 import DOM.HTML.Indexed.InputType (InputType(..)) as I
 import DOM.HTML.Indexed.MenuType (MenuType(..)) as I
-import DOM.HTML.Indexed.MenuitemType (MenuitemType(..), renderMenuitemType ) as I
+import DOM.HTML.Indexed.MenuitemType (MenuitemType(..), renderMenuitemType) as I
 import DOM.HTML.Indexed.OrderedListType (OrderedListType(..)) as I
 import DOM.HTML.Indexed.PreloadValue (PreloadValue(..), renderPreloadValue) as I
 import DOM.HTML.Indexed.ScopeValue (ScopeValue(..), renderScopeValue) as I

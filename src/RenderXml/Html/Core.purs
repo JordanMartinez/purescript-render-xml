@@ -34,11 +34,11 @@ textElem = XmlCore.textElem
 node :: forall i. ElemName NamespaceHtml -> Array (Prop i) -> Array Html -> Html
 node = XmlCore.node
 
-transitionNode 
+transitionNode
   :: forall innerNs i
    . Namespace
   -> ElemName innerNs
-  -> Array (XmlCore.Prop innerNs i) 
+  -> Array (XmlCore.Prop innerNs i)
   -> Array (XmlCore.Xml innerNs)
   -> Html
 transitionNode = XmlCore.transitionNode
@@ -50,7 +50,7 @@ transitionLeaf
   :: forall innerNs i
    . Namespace
   -> ElemName innerNs
-  -> Array (XmlCore.Prop innerNs i) 
+  -> Array (XmlCore.Prop innerNs i)
   -> Html
 transitionLeaf = XmlCore.transitionLeaf
 

@@ -119,8 +119,7 @@ type CanBeMaskedAttributes r =
   | r
   )
 
-type AllPresentationAttributes r
-  = StrokeAttributes + StrokeJoinAttributes + StokeEndAttributes
+type AllPresentationAttributes r = StrokeAttributes + StrokeJoinAttributes + StokeEndAttributes
   + FillAttributes
   + FontAttributes
   + MarkerAttributes
@@ -128,8 +127,7 @@ type AllPresentationAttributes r
   + r
 
 -- Specific SVG elements -------------------------------------------------------
-type SVGsvg
-  = GlobalAttributes + AllPresentationAttributes
+type SVGsvg = GlobalAttributes + AllPresentationAttributes
   +
     ( width :: Number
     , height :: Number
@@ -138,12 +136,10 @@ type SVGsvg
     , "xmlns:xlink" :: String
     )
 
-type SVGg
-  = GlobalAttributes + AllPresentationAttributes
+type SVGg = GlobalAttributes + AllPresentationAttributes
   + (transform :: String)
 
-type SVGforeignObject
-  = GlobalAttributes + AllPresentationAttributes
+type SVGforeignObject = GlobalAttributes + AllPresentationAttributes
   +
     ( x :: Number
     , y :: Number
@@ -151,8 +147,7 @@ type SVGforeignObject
     , width :: Number
     )
 
-type SVGlinearGradient
-  = GlobalAttributes + AllPresentationAttributes
+type SVGlinearGradient = GlobalAttributes + AllPresentationAttributes
   +
     ( gradientUnits :: String
     , gradientTransform :: Array String
@@ -164,8 +159,7 @@ type SVGlinearGradient
     , y2 :: String
     )
 
-type SVGmarker
-  = GlobalAttributes + AllPresentationAttributes
+type SVGmarker = GlobalAttributes + AllPresentationAttributes
   +
     ( markerWidth :: Number
     , markerHeight :: Number
@@ -176,8 +170,7 @@ type SVGmarker
     , markerUnits :: String
     )
 
-type SVGmask
-  = GlobalAttributes + AllPresentationAttributes
+type SVGmask = GlobalAttributes + AllPresentationAttributes
   +
     ( transform :: String
     , x :: Number
@@ -188,8 +181,7 @@ type SVGmask
     , maskContentsUnits :: String
     )
 
-type SVGcircle
-  = GlobalAttributes + CanBeMaskedAttributes + StrokeAttributes + FillAttributes + MarkerAttributes
+type SVGcircle = GlobalAttributes + CanBeMaskedAttributes + StrokeAttributes + FillAttributes + MarkerAttributes
   +
     ( cx :: Number
     , cy :: Number
@@ -197,8 +189,7 @@ type SVGcircle
     , transform :: String
     )
 
-type SVGellipse
-  = GlobalAttributes + CanBeMaskedAttributes + StrokeAttributes + FillAttributes + MarkerAttributes
+type SVGellipse = GlobalAttributes + CanBeMaskedAttributes + StrokeAttributes + FillAttributes + MarkerAttributes
   +
     ( cx :: Number
     , cy :: Number
@@ -207,8 +198,7 @@ type SVGellipse
     , transform :: String
     )
 
-type SVGline
-  = GlobalAttributes + CanBeMaskedAttributes + StrokeAttributes + StokeEndAttributes + MarkerAttributes
+type SVGline = GlobalAttributes + CanBeMaskedAttributes + StrokeAttributes + StokeEndAttributes + MarkerAttributes
   +
     ( x1 :: String
     , y1 :: String
@@ -217,22 +207,19 @@ type SVGline
     , transform :: String
     )
 
-type SVGpolyline
-  = GlobalAttributes + CanBeMaskedAttributes + StrokeAttributes + StokeEndAttributes + MarkerAttributes
+type SVGpolyline = GlobalAttributes + CanBeMaskedAttributes + StrokeAttributes + StokeEndAttributes + MarkerAttributes
   +
     ( points :: String
     , pathLength :: Number
     )
 
-type SVGpolygon
-  = GlobalAttributes + CanBeMaskedAttributes + StrokeAttributes + StokeEndAttributes + MarkerAttributes
+type SVGpolygon = GlobalAttributes + CanBeMaskedAttributes + StrokeAttributes + StokeEndAttributes + MarkerAttributes
   +
     ( points :: String
     , pathLength :: Number
     )
 
-type SVGpath
-  = GlobalAttributes + CanBeMaskedAttributes + StrokeAttributes + StokeEndAttributes
+type SVGpath = GlobalAttributes + CanBeMaskedAttributes + StrokeAttributes + StokeEndAttributes
   + StrokeJoinAttributes
   + FillAttributes
   + MarkerAttributes
@@ -241,8 +228,7 @@ type SVGpath
     , transform :: String
     )
 
-type SVGpattern
-  = GlobalAttributes
+type SVGpattern = GlobalAttributes
   +
     ( height :: Number
     , href :: String
@@ -257,8 +243,7 @@ type SVGpattern
     , y :: Number
     )
 
-type SVGrect
-  = GlobalAttributes + CanBeMaskedAttributes + StrokeAttributes + StrokeJoinAttributes
+type SVGrect = GlobalAttributes + CanBeMaskedAttributes + StrokeAttributes + StrokeJoinAttributes
   + FillAttributes
   + MarkerAttributes
   +
@@ -271,15 +256,14 @@ type SVGrect
     , transform :: String
     )
 
-type SVGstop
-  = GlobalAttributes + AllPresentationAttributes
-  + ( offset :: String
+type SVGstop = GlobalAttributes + AllPresentationAttributes
+  +
+    ( offset :: String
     , stopColor :: String
     , stopOpacity :: Number
     )
 
-type SVGtext
-  = GlobalAttributes + CanBeMaskedAttributes + StrokeAttributes + StokeEndAttributes
+type SVGtext = GlobalAttributes + CanBeMaskedAttributes + StrokeAttributes + StokeEndAttributes
   + StrokeJoinAttributes
   + FillAttributes
   + FontAttributes
@@ -291,8 +275,7 @@ type SVGtext
     , transform :: String
     )
 
-type SVGuse
-  = GlobalAttributes + CanBeMaskedAttributes + StrokeAttributes + StokeEndAttributes
+type SVGuse = GlobalAttributes + CanBeMaskedAttributes + StrokeAttributes + StokeEndAttributes
   + StrokeJoinAttributes
   + FillAttributes
   + FontAttributes
@@ -324,8 +307,7 @@ type SVGanimate = AnimationAttributes (attributeName :: String)
 
 type SVGanimateMotion = AnimationAttributes (path :: String)
 
-type SVGimage
-  = GlobalAttributes
+type SVGimage = GlobalAttributes
   ( x :: Number
   , y :: Number
   , width :: Number

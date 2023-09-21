@@ -11,12 +11,12 @@ data GradientUnit
 derive instance Eq GradientUnit
 derive instance Ord GradientUnit
 derive instance Generic GradientUnit _
-instance Show GradientUnit where 
+instance Show GradientUnit where
   show = case _ of
     GUUserSpaceOnUse -> "UserSpaceOnUse"
     GUObjectBoundingSpace -> "ObjectBoundingSpace"
 
 printGradientUnit :: GradientUnit -> String
 printGradientUnit = case _ of
-    GUUserSpaceOnUse -> "userSpaceOnUse"
-    GUObjectBoundingSpace -> "objectBoundingSpace"
+  GUUserSpaceOnUse -> "userSpaceOnUse"
+  GUObjectBoundingSpace -> "objectBoundingSpace"

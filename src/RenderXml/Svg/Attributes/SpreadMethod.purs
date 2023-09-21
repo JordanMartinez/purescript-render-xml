@@ -12,7 +12,7 @@ data SpreadMethod
 derive instance Eq SpreadMethod
 derive instance Ord SpreadMethod
 derive instance Generic SpreadMethod _
-instance Show SpreadMethod where 
+instance Show SpreadMethod where
   show = case _ of
     Pad -> "Pad"
     Reflect -> "Reflect"
